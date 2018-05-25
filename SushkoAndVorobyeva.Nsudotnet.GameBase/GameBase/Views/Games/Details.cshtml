@@ -1,0 +1,92 @@
+﻿@model GameBase.Models.Database.Game
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Game</h4>
+    <hr />
+
+    </var>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Developer.DeveloperName)
+        </dt>
+        
+        <dd>
+        
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Publisher.PublisherName)
+        </dt>
+
+        <dd>
+            
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GameName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GameName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Serial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Serial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleaseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleaseDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Multiplayer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Multiplayer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+
+        <dd>
+            <img src="data:image;base64,@System.Convert.ToBase64String(@Model.Photo)" width="80" height="80" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GameId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
